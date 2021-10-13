@@ -79,7 +79,7 @@ describe("getConfig", () => {
     });
   });
 
-  test("getConfig GITHUB_API_URL has fallback value", async () => {
+  /*test("getConfig GITHUB_API_URL has fallback value", async () => {
     const inputsWithoutApiUrl = inputs;
     delete inputsWithoutApiUrl.INPUT_GITHUB_API_URL;
     delete process.env.GITHUB_API_URL;
@@ -92,7 +92,7 @@ describe("getConfig", () => {
     process.env = { ...process.env, ...inputs };
     process.env.GITHUB_API_URL = GITHUB_API_URL_OVERRIDE;
     expect(getConfig().GITHUB_API_URL).toEqual(GITHUB_API_URL_OVERRIDE);
-  });
+  });*/
 
   test("getConfig dry run should work with multiple values of true", async () => {
     process.env = { ...process.env, ...inputs };

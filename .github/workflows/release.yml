@@ -32,7 +32,7 @@ jobs:
         REPOSITORIES: |
           ^jpoehnelt/nodelete$
         DRY_RUN: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_NO_SCOPES }}
+        GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
       env:
         FOO: ${{github.run_id}}
         FOOBAR: BAZ
@@ -49,4 +49,4 @@ jobs:
           "@semantic-release/git
           "@semantic-release/github
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
